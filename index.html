@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      background: url("Kavya.png") no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      color: #fff;
+      overflow: hidden; /* keep balloons inside */
+    }
+
+    .card {
+      background: rgba(0,0,0,0.5);
+      padding: 30px;
+      border-radius: 15px;
+      display: inline-block;
+      margin-top: 100px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3em;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+
+    /* Glow effect for heading */
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4; }
+      to   { text-shadow: 0 0 20px #ff1493, 0 0 30px #ff1493; }
+    }
+
+    /* Fade-in for card */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Balloon styles */
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 60px;
+      height: 80px;
+      background: radial-gradient(circle at 30% 30%, #ff69b4, #ff1493);
+      border-radius: 50% 50% 50% 50%;
+      animation: floatUp 10s linear infinite;
+    }
+
+    .balloon:after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 2px;
+      height: 20px;
+      background: #fff;
+    }
+
+    /* Floating animation */
+    @keyframes floatUp {
+      from { transform: translateY(0); opacity: 1; }
+      to   { transform: translateY(-120vh); opacity: 0; }
+    }
+
+    /* Different balloon positions */
+    .balloon:nth-child(1) { left: 20%; animation-delay: 0s; }
+    .balloon:nth-child(2) { left: 40%; animation-delay: 3s; }
+    .balloon:nth-child(3) { left: 60%; animation-delay: 6s; }
+    .balloon:nth-child(4) { left: 80%; animation-delay: 9s; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎉 Happy Birthday, Kavya! 🎉</h1>
+    <p>Wishing you endless joy, love, and laughter today and always 💖</p>
+  </div>
+
+  <!-- Balloons -->
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+</body>
+</html>
